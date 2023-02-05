@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10rem;
+    background-color: #0062be;
+}
+
+.header .logo {
+    position: relative;
+    max-width: 80px;
+    width: auto;
+    height: auto;
+    transition: transform 1s ease-in-out 1s;
+}
+
+.header .logo.girar {
+    transform: rotate(360deg);
+}
+
+.header .lista {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    
+}
+
+.header .item {
+    margin-left: 2rem;
+}
+
+.header .item a {
+    color: #fff;
+    font-size: 1.8rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.pepsi {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 10rem;
+    background-color: #0062be;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor .textBox {
+    position: relative;
+    max-width: 600px;
+}
+
+.contenedor .titulo {
+    line-height: 1.5;
+    font-size: 7rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.contenedor .titulo span {
+    font-size: 10rem;
+}
+
+.contenedor p {
+    color: #fff;
+    line-height: 1.8;
+    font-size: 1.4rem;
+    font-weight: 200;
+}
+
+.contenedor a {
+    color: #000;
+    background-color: #fff;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 2rem;
+    letter-spacing: 1px;
+}
+
+.contenedor .imgBox {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 5rem;
+    margin-top: 3rem;
+}
+
+.contenedor .imgBox img {
+    max-width: 200px;
+}
+
+.miniatura {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.miniatura li {
+    list-style: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.miniatura li:hover {
+    transform: translateY(-1.5rem);
+}
+
+.miniatura li img {
+    max-width: 40px;
+    width: auto;
+    height: auto;
+}
+
+.redes {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.redes li {
+    list-style: none;
+}
+
+.redes li a {
+    display: inline-block;
+    filter: invert(1);
+    transform: scale(0.6);
+}
+
+footer {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #E9E9E7;
+    font-size: 2rem;
+}
+
+@media (max-width: 1023px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .contenedor .imgBox {
+        justify-content: center;
+        padding-right: 0;
+        padding-bottom: 5rem;
+        margin-top: 5rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .pepsi {
+        padding: 5rem 1rem 8rem;
+    }
+
+    .contenedor .textBox {
+        text-align: center;
+    }
+    
+    .contenedor .titulo {
+        font-size: 3rem;
+    }
+
+    .contenedor .titulo span {
+        font-size: 5.5rem;
+    }
+
+    .contenedor .imgBox {
+        width: 100%;
+    }
+
+    .redes {
+        display: none;
+    }
+
+    .header {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .lista {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .header .logo {
+        max-width: 50px;
+    }
+}
